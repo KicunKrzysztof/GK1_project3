@@ -30,27 +30,32 @@
         {
             this.MainLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.LeftLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.FileGroupBox = new System.Windows.Forms.GroupBox();
+            this.OpenFIleButton = new System.Windows.Forms.Button();
             this.RightLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ChartsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.PictureLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.LeftPictureBox = new System.Windows.Forms.PictureBox();
-            this.RightPictureBox = new System.Windows.Forms.PictureBox();
             this.RedChartPictureBox = new System.Windows.Forms.PictureBox();
             this.GreenChartPictureBox = new System.Windows.Forms.PictureBox();
             this.BlueChartPictureBox = new System.Windows.Forms.PictureBox();
-            this.FileGroupBox = new System.Windows.Forms.GroupBox();
-            this.OpenFIleButton = new System.Windows.Forms.Button();
+            this.PictureLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.LeftPictureBox = new System.Windows.Forms.PictureBox();
+            this.RightPictureBox = new System.Windows.Forms.PictureBox();
+            this.ModeGroupBox = new System.Windows.Forms.GroupBox();
+            this.FIlterGroupBox = new System.Windows.Forms.GroupBox();
+            this.DoGroupBox = new System.Windows.Forms.GroupBox();
+            this.DoButton = new System.Windows.Forms.Button();
             this.MainLayoutPanel.SuspendLayout();
             this.LeftLayoutPanel.SuspendLayout();
+            this.FileGroupBox.SuspendLayout();
             this.RightLayoutPanel.SuspendLayout();
             this.ChartsLayoutPanel.SuspendLayout();
-            this.PictureLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LeftPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RightPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RedChartPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GreenChartPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlueChartPictureBox)).BeginInit();
-            this.FileGroupBox.SuspendLayout();
+            this.PictureLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightPictureBox)).BeginInit();
+            this.DoGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainLayoutPanel
@@ -66,28 +71,53 @@
             this.MainLayoutPanel.RowCount = 1;
             this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.MainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.MainLayoutPanel.Size = new System.Drawing.Size(1582, 853);
+            this.MainLayoutPanel.Size = new System.Drawing.Size(1382, 753);
             this.MainLayoutPanel.TabIndex = 0;
             // 
             // LeftLayoutPanel
             // 
             this.LeftLayoutPanel.ColumnCount = 1;
             this.LeftLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.LeftLayoutPanel.Controls.Add(this.DoGroupBox, 0, 3);
+            this.LeftLayoutPanel.Controls.Add(this.FIlterGroupBox, 0, 2);
             this.LeftLayoutPanel.Controls.Add(this.FileGroupBox, 0, 0);
+            this.LeftLayoutPanel.Controls.Add(this.ModeGroupBox, 0, 1);
             this.LeftLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LeftLayoutPanel.Location = new System.Drawing.Point(3, 3);
             this.LeftLayoutPanel.Name = "LeftLayoutPanel";
             this.LeftLayoutPanel.RowCount = 8;
-            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.LeftLayoutPanel.Size = new System.Drawing.Size(194, 847);
+            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.LeftLayoutPanel.Size = new System.Drawing.Size(194, 747);
             this.LeftLayoutPanel.TabIndex = 0;
+            // 
+            // FileGroupBox
+            // 
+            this.FileGroupBox.Controls.Add(this.OpenFIleButton);
+            this.FileGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.FileGroupBox.Name = "FileGroupBox";
+            this.FileGroupBox.Size = new System.Drawing.Size(188, 49);
+            this.FileGroupBox.TabIndex = 0;
+            this.FileGroupBox.TabStop = false;
+            this.FileGroupBox.Text = "Plik";
+            // 
+            // OpenFIleButton
+            // 
+            this.OpenFIleButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OpenFIleButton.Location = new System.Drawing.Point(3, 18);
+            this.OpenFIleButton.Name = "OpenFIleButton";
+            this.OpenFIleButton.Size = new System.Drawing.Size(182, 28);
+            this.OpenFIleButton.TabIndex = 0;
+            this.OpenFIleButton.Text = "Wczytaj";
+            this.OpenFIleButton.UseVisualStyleBackColor = true;
+            this.OpenFIleButton.Click += new System.EventHandler(this.OpenFIleButton_Click);
             // 
             // RightLayoutPanel
             // 
@@ -102,7 +132,7 @@
             this.RightLayoutPanel.RowCount = 2;
             this.RightLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.RightLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.RightLayoutPanel.Size = new System.Drawing.Size(1376, 847);
+            this.RightLayoutPanel.Size = new System.Drawing.Size(1176, 747);
             this.RightLayoutPanel.TabIndex = 1;
             // 
             // ChartsLayoutPanel
@@ -115,13 +145,40 @@
             this.ChartsLayoutPanel.Controls.Add(this.GreenChartPictureBox, 1, 0);
             this.ChartsLayoutPanel.Controls.Add(this.BlueChartPictureBox, 2, 0);
             this.ChartsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ChartsLayoutPanel.Location = new System.Drawing.Point(3, 650);
+            this.ChartsLayoutPanel.Location = new System.Drawing.Point(3, 550);
             this.ChartsLayoutPanel.Name = "ChartsLayoutPanel";
             this.ChartsLayoutPanel.RowCount = 1;
             this.ChartsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ChartsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.ChartsLayoutPanel.Size = new System.Drawing.Size(1370, 194);
+            this.ChartsLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.ChartsLayoutPanel.Size = new System.Drawing.Size(1170, 194);
             this.ChartsLayoutPanel.TabIndex = 0;
+            // 
+            // RedChartPictureBox
+            // 
+            this.RedChartPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RedChartPictureBox.Location = new System.Drawing.Point(67, 7);
+            this.RedChartPictureBox.Name = "RedChartPictureBox";
+            this.RedChartPictureBox.Size = new System.Drawing.Size(256, 180);
+            this.RedChartPictureBox.TabIndex = 0;
+            this.RedChartPictureBox.TabStop = false;
+            // 
+            // GreenChartPictureBox
+            // 
+            this.GreenChartPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.GreenChartPictureBox.Location = new System.Drawing.Point(457, 7);
+            this.GreenChartPictureBox.Name = "GreenChartPictureBox";
+            this.GreenChartPictureBox.Size = new System.Drawing.Size(256, 180);
+            this.GreenChartPictureBox.TabIndex = 1;
+            this.GreenChartPictureBox.TabStop = false;
+            // 
+            // BlueChartPictureBox
+            // 
+            this.BlueChartPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BlueChartPictureBox.Location = new System.Drawing.Point(847, 7);
+            this.BlueChartPictureBox.Name = "BlueChartPictureBox";
+            this.BlueChartPictureBox.Size = new System.Drawing.Size(256, 180);
+            this.BlueChartPictureBox.TabIndex = 2;
+            this.BlueChartPictureBox.TabStop = false;
             // 
             // PictureLayoutPanel
             // 
@@ -136,7 +193,7 @@
             this.PictureLayoutPanel.RowCount = 1;
             this.PictureLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.PictureLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.PictureLayoutPanel.Size = new System.Drawing.Size(1370, 641);
+            this.PictureLayoutPanel.Size = new System.Drawing.Size(1170, 541);
             this.PictureLayoutPanel.TabIndex = 1;
             // 
             // LeftPictureBox
@@ -144,87 +201,81 @@
             this.LeftPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LeftPictureBox.Location = new System.Drawing.Point(3, 3);
             this.LeftPictureBox.Name = "LeftPictureBox";
-            this.LeftPictureBox.Size = new System.Drawing.Size(679, 635);
+            this.LeftPictureBox.Size = new System.Drawing.Size(579, 535);
             this.LeftPictureBox.TabIndex = 0;
             this.LeftPictureBox.TabStop = false;
             // 
             // RightPictureBox
             // 
             this.RightPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RightPictureBox.Location = new System.Drawing.Point(688, 3);
+            this.RightPictureBox.Location = new System.Drawing.Point(588, 3);
             this.RightPictureBox.Name = "RightPictureBox";
-            this.RightPictureBox.Size = new System.Drawing.Size(679, 635);
+            this.RightPictureBox.Size = new System.Drawing.Size(579, 535);
             this.RightPictureBox.TabIndex = 1;
             this.RightPictureBox.TabStop = false;
             // 
-            // RedChartPictureBox
+            // ModeGroupBox
             // 
-            this.RedChartPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RedChartPictureBox.Location = new System.Drawing.Point(100, 7);
-            this.RedChartPictureBox.Name = "RedChartPictureBox";
-            this.RedChartPictureBox.Size = new System.Drawing.Size(256, 180);
-            this.RedChartPictureBox.TabIndex = 0;
-            this.RedChartPictureBox.TabStop = false;
+            this.ModeGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ModeGroupBox.Location = new System.Drawing.Point(3, 58);
+            this.ModeGroupBox.Name = "ModeGroupBox";
+            this.ModeGroupBox.Size = new System.Drawing.Size(188, 100);
+            this.ModeGroupBox.TabIndex = 1;
+            this.ModeGroupBox.TabStop = false;
+            this.ModeGroupBox.Text = "Tryb";
             // 
-            // GreenChartPictureBox
+            // FIlterGroupBox
             // 
-            this.GreenChartPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.GreenChartPictureBox.Location = new System.Drawing.Point(556, 7);
-            this.GreenChartPictureBox.Name = "GreenChartPictureBox";
-            this.GreenChartPictureBox.Size = new System.Drawing.Size(256, 180);
-            this.GreenChartPictureBox.TabIndex = 1;
-            this.GreenChartPictureBox.TabStop = false;
+            this.FIlterGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FIlterGroupBox.Location = new System.Drawing.Point(3, 164);
+            this.FIlterGroupBox.Name = "FIlterGroupBox";
+            this.FIlterGroupBox.Size = new System.Drawing.Size(188, 100);
+            this.FIlterGroupBox.TabIndex = 2;
+            this.FIlterGroupBox.TabStop = false;
+            this.FIlterGroupBox.Text = "Filtr";
             // 
-            // BlueChartPictureBox
+            // DoGroupBox
             // 
-            this.BlueChartPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BlueChartPictureBox.Location = new System.Drawing.Point(1013, 7);
-            this.BlueChartPictureBox.Name = "BlueChartPictureBox";
-            this.BlueChartPictureBox.Size = new System.Drawing.Size(256, 180);
-            this.BlueChartPictureBox.TabIndex = 2;
-            this.BlueChartPictureBox.TabStop = false;
+            this.DoGroupBox.Controls.Add(this.DoButton);
+            this.DoGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DoGroupBox.Location = new System.Drawing.Point(3, 270);
+            this.DoGroupBox.Name = "DoGroupBox";
+            this.DoGroupBox.Size = new System.Drawing.Size(188, 49);
+            this.DoGroupBox.TabIndex = 3;
+            this.DoGroupBox.TabStop = false;
+            this.DoGroupBox.Text = "Zastosuj";
             // 
-            // FileGroupBox
+            // DoButton
             // 
-            this.FileGroupBox.Controls.Add(this.OpenFIleButton);
-            this.FileGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FileGroupBox.Location = new System.Drawing.Point(3, 3);
-            this.FileGroupBox.Name = "FileGroupBox";
-            this.FileGroupBox.Size = new System.Drawing.Size(188, 99);
-            this.FileGroupBox.TabIndex = 0;
-            this.FileGroupBox.TabStop = false;
-            this.FileGroupBox.Text = "Plik";
-            // 
-            // OpenFIleButton
-            // 
-            this.OpenFIleButton.Location = new System.Drawing.Point(6, 21);
-            this.OpenFIleButton.Name = "OpenFIleButton";
-            this.OpenFIleButton.Size = new System.Drawing.Size(75, 23);
-            this.OpenFIleButton.TabIndex = 0;
-            this.OpenFIleButton.Text = "Wczytaj";
-            this.OpenFIleButton.UseVisualStyleBackColor = true;
-            this.OpenFIleButton.Click += new System.EventHandler(this.OpenFIleButton_Click);
+            this.DoButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DoButton.Location = new System.Drawing.Point(3, 18);
+            this.DoButton.Name = "DoButton";
+            this.DoButton.Size = new System.Drawing.Size(182, 28);
+            this.DoButton.TabIndex = 0;
+            this.DoButton.Text = "Zastosuj";
+            this.DoButton.UseVisualStyleBackColor = true;
+            this.DoButton.Click += new System.EventHandler(this.DoButton_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1582, 853);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1382, 753);
             this.Controls.Add(this.MainLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "pro3";
             this.MainLayoutPanel.ResumeLayout(false);
             this.LeftLayoutPanel.ResumeLayout(false);
+            this.FileGroupBox.ResumeLayout(false);
             this.RightLayoutPanel.ResumeLayout(false);
             this.ChartsLayoutPanel.ResumeLayout(false);
-            this.PictureLayoutPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LeftPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RightPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RedChartPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GreenChartPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlueChartPictureBox)).EndInit();
-            this.FileGroupBox.ResumeLayout(false);
+            this.PictureLayoutPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LeftPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightPictureBox)).EndInit();
+            this.DoGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -243,6 +294,10 @@
         private System.Windows.Forms.PictureBox RightPictureBox;
         private System.Windows.Forms.GroupBox FileGroupBox;
         private System.Windows.Forms.Button OpenFIleButton;
+        private System.Windows.Forms.GroupBox DoGroupBox;
+        private System.Windows.Forms.Button DoButton;
+        private System.Windows.Forms.GroupBox FIlterGroupBox;
+        private System.Windows.Forms.GroupBox ModeGroupBox;
     }
 }
 
