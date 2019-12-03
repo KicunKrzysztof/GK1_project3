@@ -1,1 +1,8 @@
-wszelkie modyfikacje dotyczą prawego obrazka, lewy jest tylko dla porównania
+Zadanie6 - Filtrowanie obrazu wg zadanych filtrów macierzowych. (Cały obszar/pędzel kołowy/zaznaczony dowolny wielokat). Podgląd histogramu.
+
+Wszelkie modyfikacje dotyczą prawego obrazka, lewy jest tylko dla porównania.
+Można podmienić prawy obrazek lewym (przycisk "=>Przesuń=>") lub lewy obrazek prawym (przycisk "<=Przesuń<=").
+Aby zastosować filtr na cały obrazek - przycisk "Zastosuj", podobnie w trybie wielokąt tylko że wcześniej trzeba narysować zamknięty wielokąt.
+Aby narysować kolejny wielokąt trzeba najpierw usunąć poprzedni (przycisk "Wyczyść").
+Histogramy sa tworzone na podstawie prawego obrazka i aktualizują się same po każdej modyfikacji.
+Pozostałe funkcje powinny być intuicyjne.
