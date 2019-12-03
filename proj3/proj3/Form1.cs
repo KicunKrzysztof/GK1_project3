@@ -13,15 +13,7 @@ using System.Reflection;
 namespace proj3
 {
     public enum Mode { wholePicture, poly, circle };
-    class Config
-    {
-        public static double[,] identity = new double[,] { { 0, 0, 0 }, { 0, 1, 0 }, { 0, 0, 0 } };
-        public static double[,] blur = new double[,] { { 1, 1, 1, 1, 1 }, { 1, 1, 1, 1, 1 }, { 1, 1, 1, 1, 1 }, { 1, 1, 1, 1, 1 }, { 1, 1, 1, 1, 1 } };
-        public static double[,] sharpen = new double[,] { { 0, -1, 0 }, { -1, 5, -1 }, { 0, -1, 0 } };
-        public static double[,] edges_detection = new double[,] { { -1, -1, -1 }, { -1, 8, -1 }, { -1, -1, -1 } };
-        public static double[,] emboss = new double[,] { { -2, -1, 0 }, { -1, 1, 1 }, { 0, 1, 2 } };
-        public static double[,] gaussian_blur = new double[,] { { 1, 4, 6, 4, 1 }, { 4, 16, 24, 16, 4 }, { 6, 24, 36, 24, 6 }, { 4, 16, 24, 16, 4 }, { 1, 4, 6, 4, 1 } };
-    }
+
     public partial class Form1 : Form
     {
         private PrintingAreas printing_areas;
@@ -176,6 +168,11 @@ namespace proj3
             current_poly = new List<Point>();
             poly_is_closed = false;
             printing_areas.DrawPoly(current_poly, poly_is_closed);
+        }
+
+        private void GenerateButton_Click(object sender, EventArgs e)
+        {
+            printing_areas.Generate();
         }
 
         private void RefreshRIghtPictureButton_Click(object sender, EventArgs e)

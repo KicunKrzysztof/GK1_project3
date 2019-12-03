@@ -224,5 +224,50 @@ namespace proj3
             right_picture.Refresh();
             CreateHistograms();
         }
+        public void Generate()
+        {
+            int x_max = left_picture.Width / 2, y_max = left_picture.Height / 2;
+            int x_mid = x_max / 2, y_mid = y_max / 2;
+            Graphics left_g = Graphics.FromImage(left_bitmap.Bitmap);
+            {
+                left_g.FillPolygon(Brushes.Red, new Point[] { new Point(0, 0), new Point(x_mid, 0), new Point(x_mid, y_mid) });
+                left_g.FillPolygon(Brushes.Lime, new Point[] { new Point(x_mid, 0), new Point(x_max, 0), new Point(x_mid, y_mid) });
+                left_g.FillPolygon(Brushes.Blue, new Point[] { new Point(x_max, 0), new Point(x_max, y_mid), new Point(x_mid, y_mid) });
+                left_g.FillPolygon(Brushes.Cyan, new Point[] { new Point(x_max, y_mid), new Point(x_max, y_max), new Point(x_mid, y_mid) });
+                left_g.FillPolygon(Brushes.Magenta, new Point[] { new Point(x_max, y_max), new Point(x_mid, y_max), new Point(x_mid, y_mid) });
+                left_g.FillPolygon(Brushes.Yellow, new Point[] { new Point(x_mid, y_max), new Point(0, y_max), new Point(x_mid, y_mid) });
+                left_g.FillPolygon(Brushes.Black, new Point[] { new Point(0, y_max), new Point(0, y_mid), new Point(x_mid, y_mid) });
+                left_g.FillPolygon(Brushes.White, new Point[] { new Point(0, y_mid), new Point(0, 0), new Point(x_mid, y_mid) });
+            }
+            for(int x = x_max + 1; x < left_picture.Width; x++)
+            {
+                for(int y = 0; y <= y_max; y++)
+                {
+                    Color c = left_bitmap.GetPixel(x - x_max, y);
+                    byte new_color = (byte)(c.R * 0.299 + c.G * 0.587 + c.B * 0.144);
+                    left_bitmap.SetPixel(x, y, Color.FromArgb(new_color, new_color, new_color));
+                }
+            }
+            for (int x = 0; x <= x_max; x++)
+            {
+                for (int y = y_max + 1; y < left_picture.Height; y++)
+                {
+                    Color c = left_bitmap.GetPixel(x, y - y_max);
+                    byte new_color = (byte)(c.R / 3.0 + c.G / 3.0 + c.B / 3.0);
+                    left_bitmap.SetPixel(x, y, Color.FromArgb(new_color, new_color, new_color));
+                }
+            }
+            for (int x = x_max + 1; x < left_picture.Width; x++)
+            {
+                for (int y = y_max + 1; y < left_picture.Height; y++)
+                {
+                    Color c = left_bitmap.GetPixel(x - x_max, y - y_max);
+                    byte new_color = (byte)((Math.Min(c.R, Math.Min(c.G, c.B)) + Math.Max(c.R, Math.Max(c.G, c.B))) / 2.0);
+                    left_bitmap.SetPixel(x, y, Color.FromArgb(new_color, new_color, new_color));
+                }
+            }
+            left_picture.Refresh();
+            RefreshRightPicture();
+        }
     }
 }

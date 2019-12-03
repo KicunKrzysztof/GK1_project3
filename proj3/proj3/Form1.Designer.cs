@@ -41,6 +41,7 @@
             this.FileGroupBox = new System.Windows.Forms.GroupBox();
             this.OpenFIleButton = new System.Windows.Forms.Button();
             this.ModeGroupBox = new System.Windows.Forms.GroupBox();
+            this.DeletePolyButton = new System.Windows.Forms.Button();
             this.TrackBarLabel = new System.Windows.Forms.Label();
             this.CircleTrackBar = new System.Windows.Forms.TrackBar();
             this.PolyRadioButton = new System.Windows.Forms.RadioButton();
@@ -60,6 +61,8 @@
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.ChangeBaseGroupBox = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.RefreshRIghtPictureButton = new System.Windows.Forms.Button();
             this.ChangeBaseButton = new System.Windows.Forms.Button();
             this.RightLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ChartsLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -69,9 +72,7 @@
             this.PictureLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.LeftPictureBox = new System.Windows.Forms.PictureBox();
             this.RightPictureBox = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.RefreshRIghtPictureButton = new System.Windows.Forms.Button();
-            this.DeletePolyButton = new System.Windows.Forms.Button();
+            this.GenerateButton = new System.Windows.Forms.Button();
             this.MainLayoutPanel.SuspendLayout();
             this.LeftLayoutPanel.SuspendLayout();
             this.FIlterGroupBox.SuspendLayout();
@@ -91,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.ChangeBaseGroupBox.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.RightLayoutPanel.SuspendLayout();
             this.ChartsLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RedChartPictureBox)).BeginInit();
@@ -99,7 +101,6 @@
             this.PictureLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightPictureBox)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainLayoutPanel
@@ -120,9 +121,6 @@
             // 
             // LeftLayoutPanel
             // 
-            this.LeftLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.LeftLayoutPanel.ColumnCount = 1;
             this.LeftLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.LeftLayoutPanel.Controls.Add(this.FIlterGroupBox, 0, 2);
@@ -133,14 +131,13 @@
             this.LeftLayoutPanel.Controls.Add(this.ChangeBaseGroupBox, 0, 5);
             this.LeftLayoutPanel.Location = new System.Drawing.Point(3, 3);
             this.LeftLayoutPanel.Name = "LeftLayoutPanel";
-            this.LeftLayoutPanel.RowCount = 7;
+            this.LeftLayoutPanel.RowCount = 10;
             this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 135F));
             this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
             this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 105F));
-            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.LeftLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.LeftLayoutPanel.Size = new System.Drawing.Size(194, 747);
             this.LeftLayoutPanel.TabIndex = 0;
             // 
@@ -243,6 +240,7 @@
             // FileGroupBox
             // 
             this.FileGroupBox.Controls.Add(this.OpenFIleButton);
+            this.FileGroupBox.Controls.Add(this.GenerateButton);
             this.FileGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FileGroupBox.Location = new System.Drawing.Point(3, 3);
             this.FileGroupBox.Name = "FileGroupBox";
@@ -253,10 +251,9 @@
             // 
             // OpenFIleButton
             // 
-            this.OpenFIleButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OpenFIleButton.Location = new System.Drawing.Point(3, 18);
+            this.OpenFIleButton.Location = new System.Drawing.Point(6, 15);
             this.OpenFIleButton.Name = "OpenFIleButton";
-            this.OpenFIleButton.Size = new System.Drawing.Size(182, 28);
+            this.OpenFIleButton.Size = new System.Drawing.Size(89, 28);
             this.OpenFIleButton.TabIndex = 0;
             this.OpenFIleButton.Text = "Wczytaj";
             this.OpenFIleButton.UseVisualStyleBackColor = true;
@@ -277,6 +274,16 @@
             this.ModeGroupBox.TabIndex = 1;
             this.ModeGroupBox.TabStop = false;
             this.ModeGroupBox.Text = "Tryb";
+            // 
+            // DeletePolyButton
+            // 
+            this.DeletePolyButton.Location = new System.Drawing.Point(98, 102);
+            this.DeletePolyButton.Name = "DeletePolyButton";
+            this.DeletePolyButton.Size = new System.Drawing.Size(87, 23);
+            this.DeletePolyButton.TabIndex = 5;
+            this.DeletePolyButton.Text = "Wyczyść";
+            this.DeletePolyButton.UseVisualStyleBackColor = true;
+            this.DeletePolyButton.Click += new System.EventHandler(this.DeletePolyButton_Click);
             // 
             // TrackBarLabel
             // 
@@ -524,17 +531,43 @@
             this.ChangeBaseGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChangeBaseGroupBox.Location = new System.Drawing.Point(3, 588);
             this.ChangeBaseGroupBox.Name = "ChangeBaseGroupBox";
-            this.ChangeBaseGroupBox.Size = new System.Drawing.Size(188, 99);
+            this.ChangeBaseGroupBox.Size = new System.Drawing.Size(188, 118);
             this.ChangeBaseGroupBox.TabIndex = 9;
             this.ChangeBaseGroupBox.TabStop = false;
             this.ChangeBaseGroupBox.Text = "Zmień obrazki";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.RefreshRIghtPictureButton, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.ChangeBaseButton, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 18);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(182, 97);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // RefreshRIghtPictureButton
+            // 
+            this.RefreshRIghtPictureButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RefreshRIghtPictureButton.Location = new System.Drawing.Point(3, 51);
+            this.RefreshRIghtPictureButton.Name = "RefreshRIghtPictureButton";
+            this.RefreshRIghtPictureButton.Size = new System.Drawing.Size(176, 43);
+            this.RefreshRIghtPictureButton.TabIndex = 2;
+            this.RefreshRIghtPictureButton.Text = "=> Przesuń =>";
+            this.RefreshRIghtPictureButton.UseVisualStyleBackColor = true;
+            this.RefreshRIghtPictureButton.Click += new System.EventHandler(this.RefreshRIghtPictureButton_Click);
             // 
             // ChangeBaseButton
             // 
             this.ChangeBaseButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChangeBaseButton.Location = new System.Drawing.Point(3, 3);
             this.ChangeBaseButton.Name = "ChangeBaseButton";
-            this.ChangeBaseButton.Size = new System.Drawing.Size(176, 33);
+            this.ChangeBaseButton.Size = new System.Drawing.Size(176, 42);
             this.ChangeBaseButton.TabIndex = 1;
             this.ChangeBaseButton.Text = "<= Przesuń <=";
             this.ChangeBaseButton.UseVisualStyleBackColor = true;
@@ -638,41 +671,15 @@
             this.RightPictureBox.MouseLeave += new System.EventHandler(this.RightPictureBox_MouseLeave);
             this.RightPictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RightPictureBox_MouseMove);
             // 
-            // tableLayoutPanel2
+            // GenerateButton
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.RefreshRIghtPictureButton, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.ChangeBaseButton, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 18);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(182, 78);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // RefreshRIghtPictureButton
-            // 
-            this.RefreshRIghtPictureButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RefreshRIghtPictureButton.Location = new System.Drawing.Point(3, 42);
-            this.RefreshRIghtPictureButton.Name = "RefreshRIghtPictureButton";
-            this.RefreshRIghtPictureButton.Size = new System.Drawing.Size(176, 33);
-            this.RefreshRIghtPictureButton.TabIndex = 2;
-            this.RefreshRIghtPictureButton.Text = "=> Przesuń =>";
-            this.RefreshRIghtPictureButton.UseVisualStyleBackColor = true;
-            this.RefreshRIghtPictureButton.Click += new System.EventHandler(this.RefreshRIghtPictureButton_Click);
-            // 
-            // DeletePolyButton
-            // 
-            this.DeletePolyButton.Location = new System.Drawing.Point(98, 102);
-            this.DeletePolyButton.Name = "DeletePolyButton";
-            this.DeletePolyButton.Size = new System.Drawing.Size(87, 23);
-            this.DeletePolyButton.TabIndex = 5;
-            this.DeletePolyButton.Text = "Wyczyść";
-            this.DeletePolyButton.UseVisualStyleBackColor = true;
-            this.DeletePolyButton.Click += new System.EventHandler(this.DeletePolyButton_Click);
+            this.GenerateButton.Location = new System.Drawing.Point(98, 15);
+            this.GenerateButton.Name = "GenerateButton";
+            this.GenerateButton.Size = new System.Drawing.Size(87, 28);
+            this.GenerateButton.TabIndex = 10;
+            this.GenerateButton.Text = "Generuj";
+            this.GenerateButton.UseVisualStyleBackColor = true;
+            this.GenerateButton.Click += new System.EventHandler(this.GenerateButton_Click);
             // 
             // Form1
             // 
@@ -703,6 +710,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ChangeBaseGroupBox.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.RightLayoutPanel.ResumeLayout(false);
             this.ChartsLayoutPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RedChartPictureBox)).EndInit();
@@ -711,7 +719,6 @@
             this.PictureLayoutPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LeftPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightPictureBox)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -762,6 +769,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button RefreshRIghtPictureButton;
         private System.Windows.Forms.Button DeletePolyButton;
+        private System.Windows.Forms.Button GenerateButton;
     }
 }
 
